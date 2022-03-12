@@ -1,0 +1,64 @@
+[
+    {
+        "name": "lock_cspr",
+        "clValue": {
+            "isCLValue": true,
+            "refType": [
+                "String",
+                "String"
+            ],
+            "data": [
+                [
+                    {
+                        "isCLValue": true,
+                        "data": "amount"
+                    },
+                    {
+                        "isCLValue": true,
+                        "data": "55555"
+                    }
+                ],
+                [
+                    {
+                        "isCLValue": true,
+                        "data": "bsc_recipient_address"
+                    },
+                    {
+                        "isCLValue": true,
+                        "data": "123456789"
+                    }
+                ],
+                [
+                    {
+                        "isCLValue": true,
+                        "data": "casper_sender_address"
+                    },
+                    {
+                        "isCLValue": true,
+                        "data": "account-hash-a66aa5ab61b26cd4178cba3fa5657652013f57689eb25e111f3aa974443591b1"
+                    }
+                ],
+                [
+                    {
+                        "isCLValue": true,
+                        "data": "event_type"
+                    },
+                    {
+                        "isCLValue": true,
+                        "data": "lock_cspr"
+                    }
+                ],
+                [
+                    {
+                        "isCLValue": true,
+                        "data": "lock_unlock_cspr_contract"
+                    },
+                    {
+                        "isCLValue": true,
+                        "data": "contract-f44a34e1e99a58e72b5879e4ceeac8fc50345a70f6d826d600221c3b27244f95"
+                    }
+                ]
+            ]
+        }
+    }
+]

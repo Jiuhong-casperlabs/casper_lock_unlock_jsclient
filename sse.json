@@ -1,0 +1,65 @@
+[
+    {
+        "name": "unlock_cspr",
+        "clValue": {
+            "isCLValue": true,
+            "refType": [
+                "String",
+                "String"
+            ],
+            "data": [
+                [
+                    {
+                        "isCLValue": true,
+                        "data": "amount"
+                    },
+                    {
+                        "isCLValue": true,
+                        "data": "333000"
+                    }
+                ],
+                [
+                    {
+                        "isCLValue": true,
+                        "data": "bsc_transaction_hash"
+                    },
+                    {
+                        "isCLValue": true,
+                        "data": "123456789"
+                    }
+                ],
+                [
+                    {
+                        "isCLValue": true,
+                        "data": "casper_receipient_address"
+                    },
+                    {
+                        "isCLValue": true,
+                        "data": "account-hash-4cb4df3355d2750ec3544f0182727f7ba6826834ec8263f32466fbab4634581e"
+                    }
+                ],
+                [
+                    {
+                        "isCLValue": true,
+                        "data": "event_type"
+                    },
+                    {
+                        "isCLValue": true,
+                        "data": "unlock_cspr"
+                    }
+                ],
+                [
+                    {
+                        "isCLValue": true,
+                        "data": "lock_unlock_cspr_contract"
+                    },
+                    {
+                        "isCLValue": true,
+                        "data": "contract-147450f2c5c6b61e01ca810e8ba478e04f07ce1de210f46d3b1f81063cef68c7"
+                    }
+                ]
+            ]
+        }
+    }
+]
+*** ***

@@ -1,0 +1,23 @@
+{
+  "name": "casper-lock-client",
+  "version": "1.0.0",
+  "homepage": "",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "casper-js-sdk": "2.8.0"
+  },
+  "scripts": {
+    "dist": "npm run clean && npm run build",
+    "clean": "rm -rf dist/",
+    "build": "tsc -p tsconfig.build.json",
+    "test": "echo \"add tests\" && exit 0"
+  }
+}
