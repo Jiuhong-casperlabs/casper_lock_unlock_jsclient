@@ -132,7 +132,7 @@ export class LOCKClient {
   }
 
   public async unLockCSPR(
-    receipient_str: string,
+    receipient_publickey: string,
     bsc_transaction_hash: string,
     amount: string,
     paymentAmount: string,
@@ -140,7 +140,7 @@ export class LOCKClient {
     keys?: Keys.AsymmetricKey[]
   ) {
     const runtimeArgs = RuntimeArgs.fromMap({
-      receipient_str: CLValueBuilder.string(receipient_str),
+      receipient_publickey: CLValueBuilder.string(receipient_publickey),
       bsc_transaction_hash: CLValueBuilder.string(bsc_transaction_hash),
       amount: CLValueBuilder.u512(amount)
     });
