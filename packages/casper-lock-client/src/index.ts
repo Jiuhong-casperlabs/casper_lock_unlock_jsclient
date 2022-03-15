@@ -1,18 +1,13 @@
 import {
-  CLValue,
   CLPublicKey,
-  CLKey,
   CLMap,
   RuntimeArgs,
   CasperClient,
   Contracts,
   Keys,
-  CLKeyParameters,
   CLValueBuilder,
   CLValueParsers 
 } from "casper-js-sdk";
-import { concat } from "@ethersproject/bytes";
-import blake from "blakejs";
 
 const { Contract, toCLMap, fromCLMap } = Contracts;
 
@@ -33,6 +28,7 @@ export const LOCKEventParser = (
   value: any
 ) => {
   if (value.body.DeployProcessed.execution_result.Success) {
+    const { deploy_hash } = value.body.DeployProcessed; 
     const { transforms } =
       value.body.DeployProcessed.execution_result.Success.effect;
 
@@ -66,21 +62,11 @@ export const LOCKEventParser = (
           return acc;
         }, []);
 
-    return { error: null, success: !!LOCKEvents.length, data: LOCKEvents };
+    return { error: null, success: !!LOCKEvents.length, data: { deploy_hash, LOCKEvents } };
   }
 
   return null;
 };
-
-const keyAndValueToHex = (key: CLValue, value: CLValue) => {
-  const aBytes = CLValueParsers.toBytes(key).unwrap();
-  const bBytes = CLValueParsers.toBytes(value).unwrap();
-
-  const blaked = blake.blake2b(concat([aBytes, bBytes]), undefined, 32);
-  const hex = Buffer.from(blaked).toString('hex');
-
-  return hex;
-}
 
 export class LOCKClient {
   casperClient: CasperClient;
